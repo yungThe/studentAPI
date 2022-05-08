@@ -169,13 +169,17 @@ router.get('/:id', (req,res) =>{
     const {id} = req.params;
     const found = students.find((students) => students.id === id);
     res.send(found);
-})
+});
 
-router.delete('/:id' , (req, res) => {
+router.patch('/:id', (req, res) =>{
     const { id } = req.params;
+    const { status } = req.body;
+    const result = students.find((students) => students.id === id);
+    result.status = status
+    res.send(result)
+});
 
-    students = students.filter((student) => students.id != id );
-    res.send(students); 
-})
+
+
 export default router;
 
