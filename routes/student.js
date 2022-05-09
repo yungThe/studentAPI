@@ -9,6 +9,7 @@ const students = [
         lastname : "Nguyen",
         firstName : "Dung",
         year : "4th",
+        total : "8000000",
         status: "Not yet"
     },
     {
@@ -16,6 +17,7 @@ const students = [
         lastname : "Do",
         firstName : "Anh",
         year : "2th",
+        total : "8000000",
         status: "Not yet"
     },
     {
@@ -23,6 +25,7 @@ const students = [
         lastname : "Nguyen",
         firstName : "Tung",
         year : "4th",
+        total : "8000000",
         status: "Not yet"
     },
     {
@@ -30,6 +33,7 @@ const students = [
         lastname : "Nguyen",
         firstName : "Long",
         year : "3th",
+        total : "8000000",
         status: "Not yet"
     },
     {
@@ -37,6 +41,7 @@ const students = [
         lastname : "Bui",
         firstName : "An",
         year : "4th",
+        total : "8000000",
         status: "Not yet"
     },
     {
@@ -44,6 +49,7 @@ const students = [
         lastname : "Luong",
         firstName : "Tung",
         year : "4th",
+        total : "8000000",
         status: "Not yet"
     },
     {
@@ -51,6 +57,7 @@ const students = [
         lastname : "Do",
         firstName : "Hung",
         year : "4th",
+        total : "8000000",
         status: "Not yet"
     },
     {
@@ -58,6 +65,7 @@ const students = [
         lastname : "Nguyen",
         firstName : "Bao",
         year : "4th",
+        total : "8000000",
         status: "Not yet"
     },
     {
@@ -65,6 +73,7 @@ const students = [
         lastname : "Nguyen",
         firstName : "Huyen",
         year : "4th",
+        total : "8000000",
         status: "Not yet"
     },
     {
@@ -72,6 +81,7 @@ const students = [
         lastname : "Nguyen",
         firstName : "Tung",
         year : "4th",
+        total : "8000000",
         status: "Not yet"
     },
     {
@@ -79,6 +89,7 @@ const students = [
         lastname : "Nguyen",
         firstName : "Huy",
         year : "4th",
+        total : "8000000",
         status: "Not yet"
     },
     {
@@ -86,6 +97,7 @@ const students = [
         lastname : "Nguyen",
         firstName : "Khang",
         year : "4th",
+        total : "8000000",
         status: "Not yet"
     },
     {
@@ -93,6 +105,7 @@ const students = [
         lastname : "Nguyen",
         firstName : "Khanh",
         year : "4th",
+        total : "8000000",
         status: "Not yet"
     },
     {
@@ -100,6 +113,7 @@ const students = [
         lastname : "Nguyen",
         firstName : "Sang",
         year : "4th",
+        total : "8000000",
         status: "Not yet"
     },
     {
@@ -121,6 +135,7 @@ const students = [
         lastname : "Do",
         firstName : "Nam",
         year : "4th",
+        total : "8000000",
         status: "Not yet"
     },
     {
@@ -128,6 +143,7 @@ const students = [
         lastname : "Hoang",
         firstName : "Nam",
         year : "4th",
+        total : "8000000",
         status: "Not yet"
     },
     {
@@ -135,6 +151,7 @@ const students = [
         lastname : "Duong",
         firstName : "Dung",
         year : "4th",
+        total : "8000000",
         status: "Not yet"
     },
     {
@@ -142,6 +159,7 @@ const students = [
         lastname : "Ha",
         firstName : "Son",
         year : "4th",
+        total : "8000000",
         status: "Not yet"
     },
     {
@@ -149,6 +167,7 @@ const students = [
         lastname : "Nguyen",
         firstName : "Vu",
         year : "4th",
+        total : "8000000",
         status: "Not yet"
     },
 ]
@@ -167,8 +186,8 @@ router.post('/',(req,res) =>{
 
 router.get('/:id', (req,res) =>{
     const {id} = req.params;
-    const found = students.find((students) => students.id === id);
-    res.send(found);
+    const result = students.find((students) => students.id === id);
+    res.send(result);
 });
 
 router.patch('/:id', (req, res) =>{
@@ -179,7 +198,11 @@ router.patch('/:id', (req, res) =>{
     res.send(result)
 });
 
-
+router.get('/invoice' ,(req, res) => {
+    const status = "ok"
+    const result = students.find((students) => students.status === status);
+    res.send(result)
+})
 
 export default router;
 
