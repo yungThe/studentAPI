@@ -198,7 +198,7 @@ router.patch('/:id', (req, res) =>{
     res.send(result)
 });
 
-router.get('/invoice' ,(req, res) => {
+router.get('/invoice/:id' ,(req, res) => {
     const status = "ok"
     const result = students.find((students) => students.status === status);
     res.send(result)
