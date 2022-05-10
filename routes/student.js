@@ -128,7 +128,7 @@ const students = [
         lastname : "Nguyen",
         firstName : "Tu",
         year : "4th",
-        status: "Not yet"
+        status: "ok"
     },
     {
         id : "17",
@@ -197,12 +197,12 @@ router.patch('/:id', (req, res) =>{
     result.status = status
     res.send(result)
 });
-
-router.get('/invoice' ,(req, res) => {
-    const status = "ok"
-    const result = students.find((students) => students.status === status);
-    res.send(result)
-})
-
+/*
+router.get('/:invoice' ,(req, res) => {
+   // const status = "ok"
+   // const result = students.filter((students) => students.status == status);
+    res.send(students);
+});
+*/
 export default router;
 
