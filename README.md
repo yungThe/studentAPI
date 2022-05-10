@@ -13,19 +13,22 @@ Developed by team 15 including:
 |:----|:-----|:---------|
 |Nguyễn Thế Dũng|B18DCCN101|Backend,Frontend|
 |Đỗ Việt Long|B18DCCN|Backend,Frontend|
-|Phạm Tuấn Dũng|B16DCCN|.|
 
 # SETUP AND RUN
 
 ### Cloning
 * In your terminal : <br>
-`$git clone https://github.com/yungThe/studentAPI`<br>
-`$cd studentAPI`<br>
+`$git clone https://github.com/yungThe/studentAPI`
+
 
 ### Run
+###### Backend
 * What you need to install before running this project : **nodeJS, expressJS, nodemon**. <br>
-* Command
+* Command<br>
+`$cd StudentAPI`<br>
 `$npm start`
+###### Frontend
+* lorem ipsum
 
 # TESTING
 
@@ -41,6 +44,7 @@ After `$npm start` the server is ready at [localhost:8080](http://localhost:8080
 
 *   [NodeJS](https://nodejs.org/en/docs/)
 *   [ExpressJS](https://expressjs.com/en/guide/routing.html)
+*   [Angular](https://angular.io/docs)
 
 # DEVELOPMENT HISTORY
 
