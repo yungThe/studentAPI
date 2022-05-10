@@ -20,17 +20,17 @@ This web application contains of a sample database of student profile; including
 # TESTING
 
 We use [Postman](https://learning.postman.com/docs/publishing-your-api/documenting-your-api/) to test the API.<br>
-After `$npm start` the server is ready at [localhost:8080](http://localhost:8080/), proceed to postman to test your API, there are GET, POST and PATCH method ready to be tested.<br>
+After `$npm start` the server is ready at [localhost:8080](http://localhost:8080/), proceed to Postman to test your API, there are GET, POST and PATCH method ready to be tested.<br>
 | **Method**             |**Link**                          | **Request body**             |
 |------------------------|:--------------------------------|:----------------------------|
 |GET                     | localhost:8080/student<br>localhost:8080/student/:id<br>localhost:8080/event|none|
-|POST|localhost:8080/student|Json formated body. Including id, firstname, lastname, total, status|
+|POST|localhost:8080/student|Json formated body. Including id, firstname, lastname, year, total, status|
 |PATCH|localhost:8080/student/:id|Json formated body. Including only status|
 
 # TECHNOLOGY USED
 
-*   NodeJS
-*   ExpressJS
+*   [NodeJS](https://nodejs.org/en/docs/)
+*   [ExpressJS](https://expressjs.com/en/guide/routing.html)
 
 # LICENSE
 
