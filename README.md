@@ -13,7 +13,7 @@ Developed by team 15 including:
 |:----|:-----|:---------|
 |Nguyễn Thế Dũng|B18DCCN101|Backend,Frontend|
 |Đỗ Việt Long|B18DCCN343|Backend,Frontend|
-|Phạm Tuấn Dũng|B18DCDt050|Frontend|
+|Phạm Tuấn Dũng|B18DCD050|Frontend|
 
 # SETUP AND RUN
 
