@@ -12,7 +12,8 @@ Developed by team 15 including:
 |Name|ID|Contribution|
 |:----|:-----|:---------|
 |Nguyễn Thế Dũng|B18DCCN101|Backend,Frontend|
-|Đỗ Việt Long|B18DCCN|Backend,Frontend|
+|Đỗ Việt Long|B18DCCN343|Backend,Frontend|
+|Phạm Tuấn Dũng|B18DCDt050|Frontend|
 
 # SETUP AND RUN
 
@@ -27,8 +28,6 @@ Developed by team 15 including:
 * Command<br>
 `$cd StudentAPI`<br>
 `$npm start`
-###### Frontend
-* lorem ipsum
 
 # TESTING
 
@@ -44,7 +43,6 @@ After `$npm start` the server is ready at [localhost:8080](http://localhost:8080
 
 *   [NodeJS](https://nodejs.org/en/docs/)
 *   [ExpressJS](https://expressjs.com/en/guide/routing.html)
-*   [Angular](https://angular.io/docs)
 
 # DEVELOPMENT HISTORY
 
@@ -56,8 +54,6 @@ After `$npm start` the server is ready at [localhost:8080](http://localhost:8080
 * PATCH student tuition status
 3. Third commit (May 9, 2022):
 * GET invoice
-4. Forth commit (upcoming):
-* User interface
 
 
 # LICENSE
