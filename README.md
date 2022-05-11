@@ -12,19 +12,21 @@ Developed by team 15 including:
 |Name|ID|Contribution|
 |:----|:-----|:---------|
 |Nguyễn Thế Dũng|B18DCCN101|Backend,Frontend|
-|Đỗ Việt Long|B18DCCN|Backend,Frontend|
-|Phạm Tuấn Dũng|B16DCCN|.|
+|Đỗ Việt Long|B18DCCN343|Backend,Frontend|
+|Phạm Tuấn Dũng|B18DCDT050|Frontend|
 
 # SETUP AND RUN
 
 ### Cloning
 * In your terminal : <br>
-`$git clone https://github.com/yungThe/studentAPI`<br>
-`$cd studentAPI`<br>
+`$git clone https://github.com/yungThe/studentAPI`
+
 
 ### Run
+###### Backend
 * What you need to install before running this project : **nodeJS, expressJS, nodemon**. <br>
-* Command
+* Command<br>
+`$cd StudentAPI`<br>
 `$npm start`
 
 # TESTING
@@ -52,8 +54,6 @@ After `$npm start` the server is ready at [localhost:8080](http://localhost:8080
 * PATCH student tuition status
 3. Third commit (May 9, 2022):
 * GET invoice
-4. Forth commit (upcoming):
-* User interface
 
 
 # LICENSE
