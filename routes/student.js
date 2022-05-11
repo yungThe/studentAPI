@@ -190,7 +190,7 @@ router.get('/:id', (req,res) =>{
     res.send(result);
 });
 
-router.patch('/:id', (req, res) =>{
+router.put('/edit/:id', (req, res) =>{
     const { id } = req.params;
     const { status } = req.body;
     const result = students.find((students) => students.id === id);
