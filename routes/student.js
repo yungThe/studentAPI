@@ -197,6 +197,7 @@ router.patch('/:id', (req, res) =>{
     result.status = status
     res.send(result)
 });
+
 /*
 router.get('/:invoice' ,(req, res) => {
    // const status = "ok"
@@ -204,5 +205,12 @@ router.get('/:invoice' ,(req, res) => {
     res.send(students);
 });
 */
+
+router.get('/invoice/:id' ,(req, res) => {
+    const { id } = req.params;
+    const result = students.find((students) => students.id === id);
+    res.send(result)
+});
+
 export default router;
 
