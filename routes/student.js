@@ -10,7 +10,7 @@ const students = [
         firstName : "Dung",
         year : "4th",
         total : "8000000",
-        status: "Not yet"
+        status: "0"
     },
     {
         id : "2",
@@ -18,7 +18,7 @@ const students = [
         firstName : "Anh",
         year : "2th",
         total : "8000000",
-        status: "Not yet"
+        status: "0"
     },
     {
         id : "3",
@@ -26,7 +26,7 @@ const students = [
         firstName : "Tung",
         year : "4th",
         total : "8000000",
-        status: "Not yet"
+        status: "0"
     },
     {
         id : "4",
@@ -34,7 +34,7 @@ const students = [
         firstName : "Long",
         year : "3th",
         total : "8000000",
-        status: "Not yet"
+        status: "0"
     },
     {
         id : "5",
@@ -42,7 +42,7 @@ const students = [
         firstName : "An",
         year : "4th",
         total : "8000000",
-        status: "Not yet"
+        status: "0"
     },
     {
         id : "6",
@@ -50,7 +50,7 @@ const students = [
         firstName : "Tung",
         year : "4th",
         total : "8000000",
-        status: "Not yet"
+        status: "0"
     },
     {
         id : "7",
@@ -58,7 +58,7 @@ const students = [
         firstName : "Hung",
         year : "4th",
         total : "8000000",
-        status: "Not yet"
+        status: "0"
     },
     {
         id : "8",
@@ -66,7 +66,7 @@ const students = [
         firstName : "Bao",
         year : "4th",
         total : "8000000",
-        status: "Not yet"
+        status: "0"
     },
     {
         id : "9",
@@ -74,7 +74,7 @@ const students = [
         firstName : "Huyen",
         year : "4th",
         total : "8000000",
-        status: "Not yet"
+        status: "0"
     },
     {
         id : "10",
@@ -82,7 +82,7 @@ const students = [
         firstName : "Tung",
         year : "4th",
         total : "8000000",
-        status: "Not yet"
+        status: "0"
     },
     {
         id : "11",
@@ -90,7 +90,7 @@ const students = [
         firstName : "Huy",
         year : "4th",
         total : "8000000",
-        status: "Not yet"
+        status: "0"
     },
     {
         id : "12",
@@ -98,7 +98,7 @@ const students = [
         firstName : "Khang",
         year : "4th",
         total : "8000000",
-        status: "Not yet"
+        status: "0"
     },
     {
         id : "13",
@@ -106,7 +106,7 @@ const students = [
         firstName : "Khanh",
         year : "4th",
         total : "8000000",
-        status: "Not yet"
+        status: "0"
     },
     {
         id : "14",
@@ -114,21 +114,23 @@ const students = [
         firstName : "Sang",
         year : "4th",
         total : "8000000",
-        status: "Not yet"
+        status: "0"
     },
     {
         id : "15",
         lastname : "Bach",
         firstName : "Ha",
         year : "4th",
-        status: "Not yet"
+        total : "8000000",
+        status: "0"
     },
     {
         id : "16",
         lastname : "Nguyen",
         firstName : "Tu",
         year : "4th",
-        status: "ok"
+        total : "8000000",
+        status: "0"
     },
     {
         id : "17",
@@ -136,7 +138,7 @@ const students = [
         firstName : "Nam",
         year : "4th",
         total : "8000000",
-        status: "Not yet"
+        status: "0"
     },
     {
         id : "18",
@@ -144,7 +146,7 @@ const students = [
         firstName : "Nam",
         year : "4th",
         total : "8000000",
-        status: "Not yet"
+        status: "0"
     },
     {
         id : "19",
@@ -152,7 +154,7 @@ const students = [
         firstName : "Dung",
         year : "4th",
         total : "8000000",
-        status: "Not yet"
+        status: "0"
     },
     {
         id : "20",
@@ -160,7 +162,7 @@ const students = [
         firstName : "Son",
         year : "4th",
         total : "8000000",
-        status: "Not yet"
+        status: "0"
     },
     {
         id : "21",
@@ -168,7 +170,7 @@ const students = [
         firstName : "Vu",
         year : "4th",
         total : "8000000",
-        status: "Not yet"
+        status: "0"
     },
 ]
 
@@ -190,7 +192,7 @@ router.get('/:id', (req,res) =>{
     res.send(result);
 });
 
-router.patch('/:id', (req, res) =>{
+router.put('/edit/:id', (req, res) =>{
     const { id } = req.params;
     const { status } = req.body;
     const result = students.find((students) => students.id === id);
