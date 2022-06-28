@@ -1,8 +1,8 @@
 import express from "express";
+import nodemailer from 'nodemailer';
 
 
 const router = express.Router();
-
 const students = [
     {
         id : "1",
@@ -10,7 +10,8 @@ const students = [
         firstName : "Dung",
         year : "4th",
         total : "8000000",
-        status: "0"
+        status: "0",
+        email: "mail@gmail.com"
     },
     {
         id : "2",
@@ -18,7 +19,8 @@ const students = [
         firstName : "Anh",
         year : "2th",
         total : "8000000",
-        status: "0"
+        status: "0",
+        email: "mail@gmail.com"
     },
     {
         id : "3",
@@ -26,7 +28,8 @@ const students = [
         firstName : "Tung",
         year : "4th",
         total : "8000000",
-        status: "0"
+        status: "0",
+        email: "mail@gmail.com"
     },
     {
         id : "4",
@@ -34,7 +37,8 @@ const students = [
         firstName : "Long",
         year : "3th",
         total : "8000000",
-        status: "0"
+        status: "0",
+        email: "mail@gmail.com"
     },
     {
         id : "5",
@@ -42,7 +46,8 @@ const students = [
         firstName : "An",
         year : "4th",
         total : "8000000",
-        status: "0"
+        status: "0",
+        email: "mail@gmail.com"
     },
     {
         id : "6",
@@ -50,7 +55,8 @@ const students = [
         firstName : "Tung",
         year : "4th",
         total : "8000000",
-        status: "0"
+        status: "0",
+        email: "mail@gmail.com"
     },
     {
         id : "7",
@@ -58,7 +64,8 @@ const students = [
         firstName : "Hung",
         year : "4th",
         total : "8000000",
-        status: "0"
+        status: "0",
+        email: "mail@gmail.com"
     },
     {
         id : "8",
@@ -66,7 +73,8 @@ const students = [
         firstName : "Bao",
         year : "4th",
         total : "8000000",
-        status: "0"
+        status: "0",
+        email: "mail@gmail.com"
     },
     {
         id : "9",
@@ -74,7 +82,8 @@ const students = [
         firstName : "Huyen",
         year : "4th",
         total : "8000000",
-        status: "0"
+        status: "0",
+        email: "mail@gmail.com"
     },
     {
         id : "10",
@@ -82,7 +91,8 @@ const students = [
         firstName : "Tung",
         year : "4th",
         total : "8000000",
-        status: "0"
+        status: "0",
+        email: "mail@gmail.com"
     },
     {
         id : "11",
@@ -90,7 +100,8 @@ const students = [
         firstName : "Huy",
         year : "4th",
         total : "8000000",
-        status: "0"
+        status: "0",
+        email: "mail@gmail.com"
     },
     {
         id : "12",
@@ -98,7 +109,8 @@ const students = [
         firstName : "Khang",
         year : "4th",
         total : "8000000",
-        status: "0"
+        status: "0",
+        email: "mail@gmail.com"
     },
     {
         id : "13",
@@ -106,7 +118,8 @@ const students = [
         firstName : "Khanh",
         year : "4th",
         total : "8000000",
-        status: "0"
+        status: "0",
+        email: "mail@gmail.com"
     },
     {
         id : "14",
@@ -114,7 +127,8 @@ const students = [
         firstName : "Sang",
         year : "4th",
         total : "8000000",
-        status: "0"
+        status: "0",
+        email: "mail@gmail.com"
     },
     {
         id : "15",
@@ -122,7 +136,8 @@ const students = [
         firstName : "Ha",
         year : "4th",
         total : "8000000",
-        status: "0"
+        status: "0",
+        email: "mail@gmail.com"
     },
     {
         id : "16",
@@ -130,7 +145,8 @@ const students = [
         firstName : "Tu",
         year : "4th",
         total : "8000000",
-        status: "0"
+        status: "0",
+        email: "mail@gmail.com"
     },
     {
         id : "17",
@@ -138,7 +154,8 @@ const students = [
         firstName : "Nam",
         year : "4th",
         total : "8000000",
-        status: "0"
+        status: "0",
+        email: "mail@gmail.com"
     },
     {
         id : "18",
@@ -146,7 +163,8 @@ const students = [
         firstName : "Nam",
         year : "4th",
         total : "8000000",
-        status: "0"
+        status: "0",
+        email: "mail@gmail.com"
     },
     {
         id : "19",
@@ -154,7 +172,8 @@ const students = [
         firstName : "Dung",
         year : "4th",
         total : "8000000",
-        status: "0"
+        status: "0",
+        email: "mail@gmail.com"
     },
     {
         id : "20",
@@ -162,7 +181,8 @@ const students = [
         firstName : "Son",
         year : "4th",
         total : "8000000",
-        status: "0"
+        status: "0",
+        email: "mail@gmail.com"
     },
     {
         id : "21",
@@ -170,9 +190,54 @@ const students = [
         firstName : "Vu",
         year : "4th",
         total : "8000000",
-        status: "0"
+        status: "0",
+        email: "mail@gmail.com"
     },
 ]
+var transporter = nodemailer.createTransport({
+    service: 'gmail',
+    auth: {
+      user: 'thedungptit1@gmail.com',
+      pass: 'raxhmehcvfojlgqz'
+    }
+  });
+  
+  var messageConfirm = "<h1> Xác nhận đã nộp học phí</h1>"
+  var msgReminder = "<h1>Nộp thiếu, lưu ý nộp đủ trước thời hạn</h1>"
+  var message = "<h1> Thông báo bắt đầu nhận học phí kì 20221, kết thúc sau 24h</h1>"
+  
+  var mailevent = {
+    from: 'thedungptit1@gmail.com',
+    to: 'dungthailand120800@gmail.com',
+    subject: 'Thông báo thu học phí kì học 20221',
+    html: message
+  };
+  
+  
+  var mail1 = {
+    from: 'thedungptit1@gmail.com',
+    to: 'dungthailand120800@gmail.com',
+    subject: 'Học phí kì học 20221',
+    html: messageConfirm
+  };
+  var mail2 = {
+    from: 'thedungptit1@gmail.com',
+    to: 'dungthailand120800@gmail.com',
+    subject: 'Reminder học phí kì học 20221',
+    html: msgReminder
+  };
+  
+  transporter.sendMail(mailevent, function(error, info){
+    if (error) {
+      console.log(error);
+    } else {
+      console.log('Email sent: ' + info.response);
+    }
+  });
+
+
+
+
 
 router.get('/', (req, res)=> {
     res.send(students);
@@ -194,10 +259,30 @@ router.get('/:id', (req,res) =>{
 
 router.put('/edit/:id', (req, res) =>{
     const { id } = req.params;
-    const { status } = req.body;
+    const { total } = req.body;
     const result = students.find((students) => students.id === id);
-    result.status = status
-    res.send(result)
+    
+    if(total < result.total){
+        transporter.sendMail(mail2, function(error, info){
+            if (error) {
+              console.log(error);
+            } else {
+              console.log('Email sent: ' + info.response);
+            }
+          });
+    }
+    if(total >= result.total){
+        result.status = 1;
+        transporter.sendMail(mail1, function(error, info){
+            if (error) {
+              console.log(error);
+            } else {
+              console.log('Email sent: ' + info.response);
+            }
+          });
+    }
+    res.send(result);
+    
 });
 
 /*
@@ -213,6 +298,7 @@ router.get('/invoice/:id' ,(req, res) => {
     const result = students.find((students) => students.id === id);
     res.send(result)
 });
+
 
 export default router;
 

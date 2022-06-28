@@ -2,6 +2,7 @@ import express from 'express';
 import bodyParser from 'body-parser';
 import studentRoute from './routes/student.js';
 import eventRoute from './routes/event.js';
+import nodemailer from 'nodemailer';
 
 const app = express();
 const PORT = 8080;
@@ -26,22 +27,21 @@ app.get('/', (req, res) => {
 });
 
 
-import nodemailer from 'nodemailer';
-
-
 var transporter = nodemailer.createTransport({
   service: 'gmail',
   auth: {
     user: 'thedungptit1@gmail.com',
-    pass: 'abcxyz123()'
+    pass: 'raxhmehcvfojlgqz'
   }
 });
 
+var message = "<table style=border-collapse:collapse;border-spacing:0;><thead><tr><td style=border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;overflow:hidden;padding:10px 5px;word-break:normal;></td></tr></thead></table>"
+
 var mailOptions = {
   from: 'thedungptit1@gmail.com',
-  to: 'dungng1536@gmail.com',
-  subject: 'Sending Email using Node.js',
-  text: 'That was easy!'
+  to: 'dungthailand120800@gmail.com',
+  subject: 'Thông báo thu học phí kì học 20221',
+  html: message
 };
 
 transporter.sendMail(mailOptions, function(error, info){
