@@ -1,0 +1,26 @@
+{"level":"error","message":"error"}
+{"level":"warn","message":"warn"}
+{"level":"info","message":"info"}
+{"level":"verbose","message":"verbose"}
+{"level":"debug","message":"debug"}
+{"level":"info","message":"Server Running on: http://localhost:8080"}
+{"level":"error","message":"error"}
+{"level":"warn","message":"warn"}
+{"level":"info","message":"info"}
+{"level":"info","message":"Server Running on: http://localhost:8080"}
+error - error
+warn - warn
+info - info
+info - Server Running on: http://localhost:8080
+error - error
+warn - warn
+info - info
+info - Server Running on: http://localhost:8080
+error - error
+warn - warn
+info - info
+info - Server Running on: http://localhost:8080
+error - error
+warn - warn
+info - info
+info - Server Running on: http://localhost:8080
