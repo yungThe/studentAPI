@@ -3,6 +3,7 @@ import bodyParser from 'body-parser';
 import studentRoute from './routes/student.js';
 import eventRoute from './routes/event.js';
 import nodemailer from 'nodemailer';
+import logger  from './logger.js';
 
 const app = express();
 const PORT = 8080;
@@ -18,8 +19,9 @@ app.use(bodyParser.json());
 app.use('/student', studentRoute);
 app.use('/event', eventRoute);
 
+
 app.listen(PORT, () =>
-    console.log('Server Running on: http://localhost:8080')
+    logger.info('Server Running on: http://localhost:8080')
 );
 
 app.get('/', (req, res) => {
@@ -27,27 +29,3 @@ app.get('/', (req, res) => {
 });
 
 
-var transporter = nodemailer.createTransport({
-  service: 'gmail',
-  auth: {
-    user: 'thedungptit1@gmail.com',
-    pass: 'raxhmehcvfojlgqz'
-  }
-});
-
-var message = "<table style=border-collapse:collapse;border-spacing:0;><thead><tr><td style=border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;overflow:hidden;padding:10px 5px;word-break:normal;></td></tr></thead></table>"
-
-var mailOptions = {
-  from: 'thedungptit1@gmail.com',
-  to: 'dungthailand120800@gmail.com',
-  subject: 'Thông báo thu học phí kì học 20221',
-  html: message
-};
-
-transporter.sendMail(mailOptions, function(error, info){
-  if (error) {
-    console.log(error);
-  } else {
-    console.log('Email sent: ' + info.response);
-  }
-});

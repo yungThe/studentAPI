@@ -1,5 +1,7 @@
 import express from "express";
 import nodemailer from 'nodemailer';
+import cron from 'node-cron';
+import logger from "../logger.js";
 
 
 const router = express.Router();
@@ -205,7 +207,7 @@ var transporter = nodemailer.createTransport({
 var messageConfirm = "<h1> Xác nhận đã nộp học phí</h1>"
 var msgReminder = "<h1>Nộp thiếu, lưu ý nộp đủ trước thời hạn</h1>"
 var message = "<h1> Thông báo bắt đầu nhận học phí kì 20221, kết thúc sau 24h</h1>"
-
+var msgReminder1 = "<h1>Sắp hết hạn, lưu ý nộp học phí.</h1>"
 var mailevent = {
     from: 'thedungptit1@gmail.com',
     to: 'dungthailand120800@gmail.com',
@@ -227,20 +229,35 @@ var mail2 = {
     html: msgReminder
 };
 
+var mail3 = {
+    from: 'thedungptit1@gmail.com',
+    to: 'dungthailand120800@gmail.com',
+    subject: 'Reminder học phí kì học 20221',
+    html: msgReminder1
+};
+
 transporter.sendMail(mailevent, function (error, info) {
     if (error) {
         console.log(error);
     } else {
-        console.log('Email sent: ' + info.response);
+        logger.info("Email sent: " + info.response)
     }
 });
 
-
-
+cron.schedule('0 23 * * *', function () {
+    console.log('---------------------');
+    logger.info('Running Cron Process');
+    // Delivering mail with sendMail method
+    transporter.sendMail(mail3, (error, info) => {
+      if (error) console.log(error);
+      else logger.info("Email sent: " + info.response)
+    });
+  });
 
 
 router.get('/', (req, res) => {
     res.send(students);
+    logger.info("Get list student")
 });
 
 router.post('/', (req, res) => {
@@ -255,6 +272,7 @@ router.get('/:id', (req, res) => {
     const { id } = req.params;
     const result = students.find((students) => students.id === id);
     res.send(result);
+    logger.info(`Student id ${id} logged in`);
 });
 
 router.put('/edit/:id', (req, res) => {
@@ -269,18 +287,19 @@ router.put('/edit/:id', (req, res) => {
             if (error) {
                 console.log(error);
             } else {
-                console.log('Email sent: ' + info.response);
+                logger.info("Email sent: " + info.response)
             }
         });
     }
     else if (money >= result.total) {
-        result.total = 0;
         result.status = 1;
+        logger.info(`id ${id} submitted tuition`)
         transporter.sendMail(mail1, function (error, info) {
             if (error) {
                 console.log(error);
+                logger.error("Email sent failed")
             } else {
-                console.log('Email sent: ' + info.response);
+                logger.info("Email sent" + info.response)
             }
         });
     }
@@ -299,9 +318,9 @@ router.get('/:invoice' ,(req, res) => {
 router.get('/invoice/:id', (req, res) => {
     const { id } = req.params;
     const result = students.find((students) => students.id === id);
+    logger.info(`id ${id} get invoice`)
     res.send(result)
 });
-
 
 export default router;
 

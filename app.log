@@ -1,26 +1,12 @@
-{"level":"error","message":"error"}
-{"level":"warn","message":"warn"}
-{"level":"info","message":"info"}
-{"level":"verbose","message":"verbose"}
-{"level":"debug","message":"debug"}
-{"level":"info","message":"Server Running on: http://localhost:8080"}
-{"level":"error","message":"error"}
-{"level":"warn","message":"warn"}
-{"level":"info","message":"info"}
-{"level":"info","message":"Server Running on: http://localhost:8080"}
-error - error
-warn - warn
-info - info
-info - Server Running on: http://localhost:8080
-error - error
-warn - warn
-info - info
-info - Server Running on: http://localhost:8080
-error - error
-warn - warn
-info - info
-info - Server Running on: http://localhost:8080
-error - error
-warn - warn
-info - info
-info - Server Running on: http://localhost:8080
+2022-06-29T14:40:31.186Z - [INFO   ] - Server Running on: http://localhost:8080
+2022-06-29T14:40:40.744Z - [INFO   ] - id 13 submitted tuition
+2022-06-29T14:40:42.818Z - [INFO   ] - Student id 13 logged in
+2022-06-29T14:40:42.919Z - [INFO   ] - Email sent
+2022-06-29T14:40:59.957Z - [INFO   ] - Get list student
+2022-06-29T14:41:08.839Z - [INFO   ] - id 1 get invoice
+2022-06-29T15:08:19.360Z - [INFO   ] - Server Running on: http://localhost:8080
+2022-06-29T15:08:22.803Z - [INFO   ] - Email sent250 2.0.0 OK  1656515302 s1-20020a170902988100b0016a4a57a25asm11469527plp.152 - gsmtp
+2022-06-29T15:10:06.113Z - [INFO   ] - Server Running on: http://localhost:8080
+2022-06-29T15:10:08.384Z - [INFO   ] - Email sent: 250 2.0.0 OK  1656515408 y6-20020aa78f26000000b005251ec8bb5bsm11760593pfr.199 - gsmtp
+2022-06-29T16:00:00.952Z - [INFO   ] - Running Cron Process
+2022-06-29T16:00:04.311Z - [INFO   ] - Email sent: 250 2.0.0 OK  1656518404 x9-20020a056a00188900b0050dc762818csm11809836pfh.102 - gsmtp
