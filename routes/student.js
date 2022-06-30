@@ -369,7 +369,9 @@ router.put('/edit/:id', (req, res) => {
     const result = students.find((students) => students.id === id);
     const result2 = tuition.find((tuition) => tuition.id === id);
     result2.money = result2.money + money;
+    logger.info(`id ${id} submitted tuition`)
     if (result2.money < result.total) {
+        
         transporter.sendMail(mail2, function (error, info) {
             if (error) {
                 console.log(error);
@@ -380,7 +382,7 @@ router.put('/edit/:id', (req, res) => {
     }
     else if (result2.money == result.total) {
         result.status = 1;
-        logger.info(`id ${id} submitted tuition`)
+        
         transporter.sendMail(mail1, function (error, info) {
             if (error) {
                 console.log(error);
