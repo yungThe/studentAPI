@@ -1,97 +1,57 @@
 {
     "$schema": "https://www.krakend.io/schema/v3.json",
     "version": 3,
-    "timeout": "50000ms",
+    "timeout": "5000ms",
     "cache_ttl": "300s",
-    "host": [
-      "http://localhost:4000"
-    ],
+    "port": 8000,
     "endpoints": [
       {
-        "endpoint": "/student",
-        "method": "GET",
+        "endpoint": "/app",
         "output_encoding": "json",
         "backend": [
           {
+            "method": "GET",
             "host": [
-              "http://localhost:8080"
+              "http://localhost:8080/"
             ],
             "url_pattern": "/student",
             "encoding": "json"
-          }
-        ]
-      },
-      {
-        "endpoint": "/student/{student}",
-        "method": "GET",
-        "output_encoding": "json",
-        "backend": [
+          },
           {
+            "method": "GET",
             "host": [
-              "http://localhost:8080"
+              "http://localhost:8080/"
             ],
-            "url_pattern": "/student/{student}",
+            "url_pattern": "/student/:id",
+            "encoding": "json"
+          },
+          {
+            "method": "PUT",
+            "host": [
+              "http://localhost:8080/"
+            ],
+            "extra_config": {
+                "modifier/martian": {
+                    "body.Modifier":{
+                        "money": 0
+                    }
+                }
+            },
+            "url_pattern": "/student/edit/:id",
+            "encoding": "json"
+          },
+          {
+            "method": "GET",
+            "host": [
+              "http://localhost:8080/"
+            ],
+            "url_pattern": "/student/invoice/:id",
             "encoding": "json"
           }
         ]
-      },
-      {
-        "endpoint": "/student",
-        "method": "POST",
-        "output_encoding": "json",
-        "backend": [
-          {
-            "host": [
-              "http://localhost:8080"
-            ],
-            "url_pattern": "/student",
-            "encoding": "json"
-          }
-        ]
-      },
-      {
-        "endpoint": "/student/{student}",
-        "method": "PUT",
-        "output_encoding": "json",
-        "backend": [
-          {
-            "host": [
-              "http://localhost:8080"
-            ],
-            "url_pattern": "/student/{student}",
-            "encoding": "json"
-          }
-        ]
-      },
-      {
-        "endpoint": "/student/invoice/{id}",
-        "output_encoding": "json",
-        "backend": [
-          {
-            "host": [
-              "http://localhost:8080"
-            ],
-            "url_pattern": "/student/invoice/{id}",
-            "encoding": "json"
-          }
-        ]
-      }
-      
+      }  
     ],
     "extra_config": {
-      "github_com/devopsfaith/krakend-cors": {
-        "allow_methods": [
-          "GET",
-          "HEAD",
-          "POST",
-          "PUT",
-          "DELETE",
-          "CONNECT",
-          "OPTIONS",
-          "TRACE",
-          "PATCH"
-        ]
-      }
     },
     "output_encoding": "json"
   }

@@ -207,79 +207,79 @@ const tuition = [
     },
     {
         id: "3",
-        money: "0"
+        money: 0
     },
     {
         id: "4",
-        money: "0"
+        money: 0
     },
     {
         id: "5",
-        money: "0"
+        money: 0
     },
     {
         id: "6",
-        money: "0"
+        money: 0
     },
     {
         id: "7",
-        money: "0"
+        money: 0
     },
     {
         id: "8",
-        money: "0"
+        money: 0
     },
     {
         id: "9",
-        money: "0"
+        money: 0
     },
     {
         id: "10",
-        money: "0"
+        money: 0
     },
     {
         id: "11",
-        money: "0"
+        money: 0
     },
     {
         id: "12",
-        money: "0"
+        money: 0
     },
     {
         id: "13",
-        money: "0"
+        money: 0
     },
     {
         id: "14",
-        money: "0"
+        money: 0
     },
     {
         id: "15",
-        money: "0"
+        money: 0
     },
     {
         id: "16",
-        money: "0"
+        money: 0
     },
     {
         id: "17",
-        money: "0"
+        money: 0
     },
     {
         id: "18",
-        money: "0"
+        money: 0
     },
     {
         id: "19",
-        money: "0"
+        money: 0
     },
     {
         id: "20",
-        money: "0"
+        money: 0
     },
     {
         id: "21",
-        money: "0"
+        money: 0
     }
 ]
 var transporter = nodemailer.createTransport({
@@ -332,7 +332,7 @@ transporter.sendMail(mailevent, function (error, info) {
 
 cron.schedule('0 23 * * *', function () {
     console.log('---------------------');
-    logger.info('Running Cron Process');
+    logger.warn('Running Cron Process');
     // Delivering mail with sendMail method
     transporter.sendMail(mail3, (error, info) => {
       if (error) console.log(error);
@@ -343,7 +343,7 @@ cron.schedule('0 23 * * *', function () {
 
 router.get('/', (req, res) => {
     res.send({students,tuition})
-    logger.info("Get list student")
+    logger.info("GET - /student")
 });
 
 router.post('/', (req, res) => {
@@ -352,6 +352,7 @@ router.post('/', (req, res) => {
     const studentWithID = { ...student, id: studentsID }
     students.push(studentWithID);
     res.send('Student added');
+    logger.warn("Student added");
 });
 
 router.get('/:id', (req, res) => {
@@ -359,7 +360,7 @@ router.get('/:id', (req, res) => {
     const result = students.find((students) => students.id === id);
     const result2 = tuition.find((tuition) => tuition.id === id);
     res.send({"Info": result,"Tuition": result2.money})
-    logger.info(`Student id ${id} logged in`);
+    logger.info(`GET - /student/${id}`)
 });
 
 router.put('/edit/:id', (req, res) => {
@@ -368,10 +369,9 @@ router.put('/edit/:id', (req, res) => {
     //console.log(money);
     const result = students.find((students) => students.id === id);
     const result2 = tuition.find((tuition) => tuition.id === id);
-    result2.money = result2.money + money;
-    logger.info(`id ${id} submitted tuition`)
+    result2.money = result2.money + +money;
+    logger.info(`PUT - /student/edit/${id}`)
     if (result2.money < result.total) {
-        
         transporter.sendMail(mail2, function (error, info) {
             if (error) {
                 console.log(error);
@@ -380,7 +380,7 @@ router.put('/edit/:id', (req, res) => {
             }
         });
     }
-    else if (result2.money == result.total) {
+    else if (result2.money >= result.total) {
         result.status = 1;
         
         transporter.sendMail(mail1, function (error, info) {
@@ -407,7 +407,7 @@ router.get('/invoice/:id', (req, res) => {
     const { id } = req.params;
     const result = students.find((students) => students.id === id);
     const result2 = tuition.find((tuition) => tuition.id === id);
-    logger.info(`id ${id} get invoice`)
+    logger.info(`GET - /student/invoice/${id}`)
     res.send({result,result2})
 });
 

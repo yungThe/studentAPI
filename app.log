@@ -115,3 +115,129 @@
 2022-06-30T05:24:38.931Z - [INFO   ] - id 2 submitted tuition
 2022-06-30T05:24:39.799Z - [INFO   ] - Email sent: 250 2.0.0 OK  1656566679 x9-20020aa784c9000000b005251fc16ff8sm12319473pfn.220 - gsmtp
 2022-06-30T05:24:43.260Z - [INFO   ] - Email sent: 250 2.0.0 OK  1656566682 f8-20020a056a001ac800b005251b1fde90sm12802789pfv.219 - gsmtp
+2022-06-30T06:04:26.924Z - [INFO   ] - Server Running on: http://localhost:8080
+2022-06-30T06:04:31.031Z - [INFO   ] - Email sent: 250 2.0.0 OK  1656569071 64-20020a621743000000b0051e7b6e8b12sm12932224pfx.11 - gsmtp
+2022-06-30T06:04:41.252Z - [INFO   ] - Id 2 submitted tuition
+2022-06-30T06:04:43.819Z - [INFO   ] - Email sent: 250 2.0.0 OK  1656569083 q14-20020a63d60e000000b0040cf5cd74cdsm12137427pgg.19 - gsmtp
+2022-06-30T06:04:57.968Z - [INFO   ] - Id 2 submitted tuition
+2022-06-30T06:05:01.170Z - [INFO   ] - Email sent250 2.0.0 OK  1656569101 x188-20020a6263c5000000b0052513c1c4bbsm12585390pfb.38 - gsmtp
+2022-06-30T07:24:36.806Z - [INFO   ] - Id 2 submitted tuition
+2022-06-30T10:50:03.780Z - [INFO   ] - Get list student
+2022-06-30T10:51:16.271Z - [INFO   ] - Server Running on: http://localhost:8080
+2022-06-30T10:51:20.491Z - [INFO   ] - Email sent: 250 2.0.0 OK  1656586280 j4-20020a17090276c400b0016188a4005asm13099056plt.122 - gsmtp
+2022-06-30T10:51:41.091Z - [INFO   ] - Student id 1 logged in
+2022-06-30T10:51:46.883Z - [INFO   ] - Id 1 submitted tuition
+2022-06-30T10:51:48.039Z - [INFO   ] - Student id 1 logged in
+2022-06-30T10:51:49.348Z - [INFO   ] - Email sent: 250 2.0.0 OK  1656586309 l18-20020a635b52000000b003fba1a97c49sm12912341pgm.61 - gsmtp
+2022-06-30T10:51:53.891Z - [INFO   ] - Get list student
+2022-06-30T10:51:55.673Z - [INFO   ] - Get list student
+2022-06-30T10:52:17.054Z - [INFO   ] - Id 1 submitted tuition
+2022-06-30T10:52:17.931Z - [INFO   ] - Student id 1 logged in
+2022-06-30T10:52:20.391Z - [INFO   ] - Email sent: 250 2.0.0 OK  1656586340 cu7-20020a056a00448700b00525373aac7csm13162584pfb.26 - gsmtp
+2022-06-30T10:52:20.525Z - [INFO   ] - Get list student
+2022-06-30T10:52:22.001Z - [INFO   ] - Get list student
+2022-06-30T10:52:22.742Z - [INFO   ] - Get list student
+2022-06-30T10:52:50.068Z - [INFO   ] - id 1 get invoice
+2022-06-30T10:53:08.480Z - [INFO   ] - Get list student
+2022-06-30T10:53:41.063Z - [INFO   ] - Server Running on: http://localhost:8080
+2022-06-30T10:53:43.634Z - [INFO   ] - Email sent: 250 2.0.0 OK  1656586423 g194-20020a6252cb000000b00527d84df6a6sm4257264pfb.208 - gsmtp
+2022-06-30T10:53:47.010Z - [INFO   ] - Get list student
+2022-06-30T10:53:49.089Z - [INFO   ] - id 1 get invoice
+2022-06-30T10:54:13.535Z - [INFO   ] - Id 1 submitted tuition
+2022-06-30T10:54:14.701Z - [INFO   ] - Student id 1 logged in
+2022-06-30T10:54:15.906Z - [INFO   ] - Email sent: 250 2.0.0 OK  1656586455 x2-20020a170902b40200b00168dadc7354sm13097383plr.78 - gsmtp
+2022-06-30T10:54:18.163Z - [INFO   ] - Get list student
+2022-06-30T10:54:20.777Z - [INFO   ] - id 1 get invoice
+2022-06-30T10:54:50.431Z - [INFO   ] - Student id 1 logged in
+2022-06-30T10:55:16.687Z - [INFO   ] - Id 1 submitted tuition
+2022-06-30T10:55:19.686Z - [INFO   ] - Email sent: 250 2.0.0 OK  1656586519 o13-20020a17090a5b0d00b001ea629a431bsm4172940pji.8 - gsmtp
+2022-06-30T10:56:48.187Z - [INFO   ] - Server Running on: http://localhost:8080
+2022-06-30T10:56:51.175Z - [INFO   ] - Email sent: 250 2.0.0 OK  1656586611 e17-20020aa798d1000000b00525496442ccsm13299770pfm.216 - gsmtp
+2022-06-30T10:56:57.117Z - [INFO   ] - Id 1 submitted tuition
+2022-06-30T10:56:59.316Z - [INFO   ] - Id 1 submitted tuition
+2022-06-30T10:56:59.607Z - [INFO   ] - Email sent: 250 2.0.0 OK  1656586619 14-20020a62180e000000b0051bf246ca2bsm13297280pfy.100 - gsmtp
+2022-06-30T10:57:02.396Z - [INFO   ] - Email sent250 2.0.0 OK  1656586622 ch9-20020a056a00288900b0051b9e224623sm13599433pfb.141 - gsmtp
+2022-06-30T10:57:03.049Z - [INFO   ] - Id 1 submitted tuition
+2022-06-30T10:57:05.920Z - [INFO   ] - Email sent250 2.0.0 OK  1656586625 g4-20020aa796a4000000b005281e564b57sm279283pfk.178 - gsmtp
+2022-06-30T10:57:17.013Z - [INFO   ] - Id 7 submitted tuition
+2022-06-30T10:57:19.800Z - [INFO   ] - Email sent: 250 2.0.0 OK  1656586639 im23-20020a170902bb1700b00163daef3dc2sm13084391plb.84 - gsmtp
+2022-06-30T10:57:21.118Z - [INFO   ] - Id 7 submitted tuition
+2022-06-30T10:57:21.997Z - [INFO   ] - Id 7 submitted tuition
+2022-06-30T10:57:22.593Z - [INFO   ] - Id 7 submitted tuition
+2022-06-30T10:57:23.226Z - [INFO   ] - Id 7 submitted tuition
+2022-06-30T10:57:23.783Z - [INFO   ] - Id 7 submitted tuition
+2022-06-30T10:57:23.964Z - [INFO   ] - Email sent: 250 2.0.0 OK  1656586643 ik14-20020a170902ab0e00b0015e8d4eb2e3sm13011375plb.301 - gsmtp
+2022-06-30T10:57:24.311Z - [INFO   ] - Id 7 submitted tuition
+2022-06-30T10:57:24.796Z - [INFO   ] - Id 7 submitted tuition
+2022-06-30T10:57:25.178Z - [INFO   ] - Email sent: 250 2.0.0 OK  1656586645 q21-20020aa79835000000b0051844a64d3dsm13381847pfl.25 - gsmtp
+2022-06-30T10:57:25.292Z - [INFO   ] - Id 7 submitted tuition
+2022-06-30T10:57:25.979Z - [INFO   ] - Email sent: 250 2.0.0 OK  1656586645 21-20020aa79115000000b0050dc7628171sm13109747pfh.75 - gsmtp
+2022-06-30T10:57:26.047Z - [INFO   ] - Id 7 submitted tuition
+2022-06-30T10:57:26.718Z - [INFO   ] - Id 7 submitted tuition
+2022-06-30T10:57:27.194Z - [INFO   ] - Id 7 submitted tuition
+2022-06-30T10:57:27.415Z - [INFO   ] - Email sent: 250 2.0.0 OK  1656586647 v3-20020a170902d68300b0015e8d4eb246sm13114406ply.144 - gsmtp
+2022-06-30T10:57:27.629Z - [INFO   ] - Id 7 submitted tuition
+2022-06-30T10:57:28.057Z - [INFO   ] - Id 7 submitted tuition
+2022-06-30T10:57:28.462Z - [INFO   ] - Id 7 submitted tuition
+2022-06-30T10:57:28.730Z - [INFO   ] - Email sent: 250 2.0.0 OK  1656586648 jj4-20020a170903048400b0016a2b68823esm13084819plb.141 - gsmtp
+2022-06-30T10:57:28.858Z - [INFO   ] - Id 7 submitted tuition
+2022-06-30T10:57:29.084Z - [INFO   ] - Email sent: 250 2.0.0 OK  1656586648 a79-20020a621a52000000b0051bb61c0eacsm3170972pfa.20 - gsmtp
+2022-06-30T10:57:29.370Z - [INFO   ] - Id 7 submitted tuition
+2022-06-30T10:57:29.700Z - [INFO   ] - Id 7 submitted tuition
+2022-06-30T10:57:30.085Z - [INFO   ] - Id 7 submitted tuition
+2022-06-30T10:57:30.144Z - [INFO   ] - Email sent: 250 2.0.0 OK  1656586650 n17-20020a056a0007d100b0051bada81bc7sm13219155pfu.161 - gsmtp
+2022-06-30T10:57:30.415Z - [INFO   ] - Id 7 submitted tuition
+2022-06-30T10:57:31.266Z - [INFO   ] - Email sent: 250 2.0.0 OK  1656586651 g29-20020aa79f1d000000b0051c4f6d2d95sm13322433pfr.106 - gsmtp
+2022-06-30T10:57:32.718Z - [INFO   ] - Email sent: 250 2.0.0 OK  1656586652 x9-20020a1709027c0900b0016b8a72740dsm6154483pll.222 - gsmtp
+2022-06-30T10:57:32.939Z - [INFO   ] - Email sent: 250 2.0.0 OK  1656586652 d21-20020a63d715000000b00408a81ea6basm12980362pgg.21 - gsmtp
+2022-06-30T10:57:33.737Z - [INFO   ] - Email sent: 250 2.0.0 OK  1656586653 f1-20020a654001000000b0040d22243295sm13272527pgp.79 - gsmtp
+2022-06-30T10:57:33.925Z - [INFO   ] - Email sent: 250 2.0.0 OK  1656586653 c126-20020a621c84000000b005252defb016sm13292775pfc.122 - gsmtp
+2022-06-30T10:57:34.447Z - [INFO   ] - Email sent: 250 2.0.0 OK  1656586654 t4-20020a635f04000000b0040cc830b0cfsm13145889pgb.39 - gsmtp
+2022-06-30T10:57:35.057Z - [INFO   ] - Email sent: 250 2.0.0 OK  1656586654 u34-20020a056a0009a200b005190eea6c37sm13488246pfg.157 - gsmtp
+2022-06-30T10:57:35.579Z - [INFO   ] - Email sent: 250 2.0.0 OK  1656586655 be19-20020a056a001f1300b005254c71df0esm13018091pfb.86 - gsmtp
+2022-06-30T10:57:36.359Z - [INFO   ] - Email sent: 250 2.0.0 OK  1656586656 h4-20020a056a001a4400b005252e524d1csm13195473pfv.211 - gsmtp
+2022-06-30T10:57:37.174Z - [INFO   ] - Email sent: 250 2.0.0 OK  1656586657 d11-20020a170903230b00b0016a5384071bsm13269848plh.1 - gsmtp
+2022-06-30T10:57:37.737Z - [INFO   ] - Email sent: 250 2.0.0 OK  1656586657 b1-20020a170902a9c100b0016a1e2c2efcsm13112742plr.223 - gsmtp
+2022-06-30T10:57:37.958Z - [INFO   ] - Id 7 submitted tuition
+2022-06-30T10:57:38.636Z - [INFO   ] - Email sent: 250 2.0.0 OK  1656586658 f1-20020a654001000000b0040d22243295sm13272691pgp.79 - gsmtp
+2022-06-30T10:57:40.948Z - [INFO   ] - Email sent250 2.0.0 OK  1656586660 cn13-20020a056a00340d00b0051c6613b5basm13181841pfb.134 - gsmtp
+2022-06-30T10:57:48.797Z - [INFO   ] - Get list student
+2022-06-30T11:38:23.506Z - [INFO   ] - Server Running on: http://localhost:8080
+2022-06-30T11:38:28.041Z - [INFO   ] - Email sent: 250 2.0.0 OK  1656589107 h15-20020a170902680f00b00161e50e2245sm13149168plk.178 - gsmtp
+2022-06-30T11:38:34.913Z - [INFO   ] - PUT - /student/edit/7
+2022-06-30T11:38:37.242Z - [INFO   ] - Email sent250 2.0.0 OK  1656589117 t15-20020a170902e84f00b0015e8d4eb219sm13448339plg.99 - gsmtp
+2022-06-30T11:38:50.541Z - [INFO   ] - GET - /student/1
+2022-06-30T11:39:10.149Z - [INFO   ] - GET - /student/invoice/7
+2022-06-30T11:39:47.905Z - [INFO   ] - PUT - /student/edit/3
+2022-06-30T11:39:50.309Z - [INFO   ] - Email sent250 2.0.0 OK  1656589190 t9-20020a17090aba8900b001e3937f21absm4162981pjr.19 - gsmtp
+2022-06-30T11:40:03.213Z - [INFO   ] - GET - /student
+2022-06-30T14:14:04.399Z - [INFO   ] - Server Running on: http://localhost:8080
+2022-06-30T14:14:07.301Z - [INFO   ] - Email sent: 250 2.0.0 OK  1656598447 y1-20020a056a001c8100b0051ba303f1c0sm13524883pfw.127 - gsmtp
+2022-06-30T14:14:38.242Z - [INFO   ] - GET - /student/invoice/:id
+2022-06-30T14:14:38.249Z - [INFO   ] - GET - /student
+2022-06-30T14:31:42.254Z - [INFO   ] - GET - /student
+2022-06-30T14:31:42.257Z - [INFO   ] - GET - /student/invoice/:id
+2022-06-30T14:32:39.229Z - [INFO   ] - GET - /student/invoice/:id
+2022-06-30T14:32:39.232Z - [INFO   ] - GET - /student
+2022-06-30T14:33:01.053Z - [INFO   ] - GET - /student/invoice/:id
+2022-06-30T14:33:01.056Z - [INFO   ] - GET - /student
+2022-06-30T14:33:49.515Z - [INFO   ] - GET - /student
+2022-06-30T14:33:49.515Z - [INFO   ] - GET - /student/invoice/:id
+2022-06-30T14:35:42.190Z - [INFO   ] - GET - /student/invoice/:id
+2022-06-30T14:35:42.195Z - [INFO   ] - GET - /student
+2022-06-30T14:35:56.276Z - [INFO   ] - PUT - /student/edit/1
+2022-06-30T14:35:59.132Z - [INFO   ] - Email sent: 250 2.0.0 OK  1656599759 p4-20020a63c144000000b003fc4001fd5fsm24931pgi.10 - gsmtp
+2022-06-30T14:36:09.370Z - [INFO   ] - GET - /student/1
+2022-06-30T14:36:27.055Z - [INFO   ] - PUT - /student/edit/1
+2022-06-30T14:36:29.762Z - [INFO   ] - Email sent: 250 2.0.0 OK  1656599789 jg6-20020a17090326c600b0016a087cfad8sm13469372plb.264 - gsmtp
+2022-06-30T14:36:36.384Z - [INFO   ] - PUT - /student/edit/1
+2022-06-30T14:36:39.598Z - [INFO   ] - Email sent250 2.0.0 OK  1656599799 bf20-20020a056a000d9400b00525392cb386sm13582135pfb.201 - gsmtp
+2022-06-30T14:52:48.528Z - [INFO   ] - Server Running on: http://localhost:8080
+2022-06-30T14:52:51.763Z - [INFO   ] - Email sent: 250 2.0.0 OK  1656600771 f11-20020a170902f38b00b0016a1e2d1491sm13549828ple.59 - gsmtp
+2022-06-30T14:53:11.554Z - [INFO   ] - GET - /student
+2022-06-30T14:53:33.390Z - [INFO   ] - PUT - /student/edit/1
+2022-06-30T14:53:36.006Z - [INFO   ] - GET - /student
+2022-06-30T14:53:38.407Z - [INFO   ] - Email sent: 250 2.0.0 OK  1656600817 f31-20020a63511f000000b00405111cd999sm13467983pgb.36 - gsmtp
+2022-06-30T14:53:46.306Z - [INFO   ] - PUT - /student/edit/1
+2022-06-30T14:53:49.375Z - [INFO   ] - GET - /student
+2022-06-30T14:53:52.462Z - [INFO   ] - Email sent250 2.0.0 OK  1656600832 q10-20020a635c0a000000b0040c40b022fbsm13154940pgb.94 - gsmtp
