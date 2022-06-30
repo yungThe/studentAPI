@@ -196,6 +196,92 @@ const students = [
         email: "mail@gmail.com"
     },
 ]
+const tuition = [
+    {
+        id: "1",
+        money: 0
+    },
+    {
+        id: "2",
+        money: 0
+    },
+    {
+        id: "3",
+        money: "0"
+    },
+    {
+        id: "4",
+        money: "0"
+    },
+    {
+        id: "5",
+        money: "0"
+    },
+    {
+        id: "6",
+        money: "0"
+    },
+    {
+        id: "7",
+        money: "0"
+    },
+    {
+        id: "8",
+        money: "0"
+    },
+    {
+        id: "9",
+        money: "0"
+    },
+    {
+        id: "10",
+        money: "0"
+    },
+    {
+        id: "11",
+        money: "0"
+    },
+    {
+        id: "12",
+        money: "0"
+    },
+    {
+        id: "13",
+        money: "0"
+    },
+    {
+        id: "14",
+        money: "0"
+    },
+    {
+        id: "15",
+        money: "0"
+    },
+    {
+        id: "16",
+        money: "0"
+    },
+    {
+        id: "17",
+        money: "0"
+    },
+    {
+        id: "18",
+        money: "0"
+    },
+    {
+        id: "19",
+        money: "0"
+    },
+    {
+        id: "20",
+        money: "0"
+    },
+    {
+        id: "21",
+        money: "0"
+    }
+]
 var transporter = nodemailer.createTransport({
     service: 'gmail',
     auth: {
@@ -256,7 +342,7 @@ cron.schedule('0 23 * * *', function () {
 
 
 router.get('/', (req, res) => {
-    res.send(students);
+    res.send({students,tuition})
     logger.info("Get list student")
 });
 
@@ -271,18 +357,19 @@ router.post('/', (req, res) => {
 router.get('/:id', (req, res) => {
     const { id } = req.params;
     const result = students.find((students) => students.id === id);
-    res.send(result);
+    const result2 = tuition.find((tuition) => tuition.id === id);
+    res.send({"Info": result,"Tuition": result2.money})
     logger.info(`Student id ${id} logged in`);
 });
 
 router.put('/edit/:id', (req, res) => {
     const { id } = req.params;
     const {money} = req.body;
-    console.log(money);
+    //console.log(money);
     const result = students.find((students) => students.id === id);
-
-    if (money < result.total) {
-        result.total -= money;
+    const result2 = tuition.find((tuition) => tuition.id === id);
+    result2.money = result2.money + money;
+    if (result2.money < result.total) {
         transporter.sendMail(mail2, function (error, info) {
             if (error) {
                 console.log(error);
@@ -291,7 +378,7 @@ router.put('/edit/:id', (req, res) => {
             }
         });
     }
-    else if (money >= result.total) {
+    else if (result2.money == result.total) {
         result.status = 1;
         logger.info(`id ${id} submitted tuition`)
         transporter.sendMail(mail1, function (error, info) {
@@ -303,8 +390,7 @@ router.put('/edit/:id', (req, res) => {
             }
         });
     }
-    res.send(result);
-
+    res.send({"Info": result,"Money submitted":result2.money});
 });
 
 /*
@@ -318,8 +404,9 @@ router.get('/:invoice' ,(req, res) => {
 router.get('/invoice/:id', (req, res) => {
     const { id } = req.params;
     const result = students.find((students) => students.id === id);
+    const result2 = tuition.find((tuition) => tuition.id === id);
     logger.info(`id ${id} get invoice`)
-    res.send(result)
+    res.send({result,result2})
 });
 
 export default router;
