@@ -1,1 +1,2 @@
-eol=lf
+*.vcproj    eol=crlf
+*.sh        eol=lf
